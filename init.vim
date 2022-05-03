@@ -38,15 +38,15 @@ set number
 set noswapfile
 set scrolloff=7
 
-" On pressing tab, insert 2 spaces
-" set expandtab
+" On pressing tab, insert 4 spaces
+set expandtab
   
-" Show existing tab with 2 spaces width
-set tabstop=2
-set softtabstop=2
+" Show existing tab with 4 spaces width
+set tabstop=4
+set softtabstop=4
 
-" When indenting with '>', use 2 spaces width 
-set shiftwidth=2
+" When indenting with '>', use 4 spaces width 
+set shiftwidth=4
 
 
 let mapleader = " "
@@ -60,6 +60,12 @@ map <leader>l :wincmd l <CR>
 
 nnoremap <C-e> :NERDTree<CR>
 nnoremap <C-w> :NERDTreeToggle<CR>
+
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
 
 let g:dart_format_on_save = 1
 let g:dartfmt_options = ['--fix', '--line-length 120']
@@ -87,10 +93,10 @@ endfunction
 
 nmap <C-P> :FZF<CR>
 
-imap <tab> <Plug>(coc-snippets-expand)
+"imap <tab> <Plug>(coc-snippets-expand)
 let g:UltiSnipsExpandTrigger = '<Nop>'
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
+let g:coc_snippet_next = '<C-.>'
+let g:coc_snippet_prev = '<C-S-.>'
 
 " Use <c-space> to trigger completion.
 if has('nvim')
